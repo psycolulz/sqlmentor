@@ -21,7 +21,7 @@ echo " This Tool Is For Educational Purposes! Shoutout To The SQLmap Developers"
 echo 
 echo 
 PS3='root@sqlmentor~:'
-options=("1. SQL Crawling" "2. SQL Crawling + Forms" "3. SQL GET Req." "4. SQL POST Req." "5. SQL Auth Site" "6. Collect DB & User" "7. Sql & Tables" "8. SQL User Columns" "9. SQL mssql DB" "10. SQL mysql DB" "11. SQL oracle DB" "12. SQL postgres DB" "13. Update Tool")
+options=(" SQL Crawling" " SQL Crawling + Forms" " SQL GET Req." " SQL POST Req." " SQL Auth Site" " Collect DB & User" " Sql & Tables" " SQL User Columns" " SQL mssql DB" " SQL mysql DB" " SQL oracle DB" " SQL postgres DB" " Update Tool")
 select opt in "${options[@]}"
 do 
 case $opt in 
