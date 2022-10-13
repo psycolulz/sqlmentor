@@ -10,7 +10,7 @@ echo "  ██████   █████   ██▓     ███▄ ▄█
   ▒   ██▒░██  █▀ ░▒██░    ▒██    ▒██ ▒▓█  ▄ ▓██▒  ▐▌██▒░ ▓██▓ ░ ▒██   ██░▒██▀▀█▄  
 ▒██████▒▒░▒███▒█▄ ░██████▒▒██▒   ░██▒░▒████▒▒██░   ▓██░  ▒██▒ ░ ░ ████▓▒░░██▓ ▒██▒ @psycolulz
 ▒ ▒▓▒ ▒ ░░░ ▒▒░ ▒ ░ ▒░▓  ░░ ▒░   ░  ░░░ ▒░ ░░ ▒░   ▒ ▒   ▒ ░░   ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░
-░ ░▒  ░ ░ ░ ▒░  ░ ░ ░ ▒  ░░  ░      ░ ░ ░  ░░ ░░   ░ ▒░    ░      ░ ▒ ▒░   ░▒ ░ ▒░  V. 1.0.0
+░ ░▒  ░ ░ ░ ▒░  ░ ░ ░ ▒  ░░  ░      ░ ░ ░  ░░ ░░   ░ ▒░    ░      ░ ▒ ▒░   ░▒ ░ ▒░  V. 1.0.3
 ░  ░  ░     ░   ░   ░ ░   ░      ░      ░      ░   ░ ░   ░      ░ ░ ░ ▒    ░░   ░ 
       ░      ░        ░  ░       ░      ░  ░         ░              ░ ░     ░     
      "                                                                             
@@ -21,7 +21,7 @@ echo " This Tool Is For Educational Purposes! Shoutout To The SQLmap Developers"
 echo 
 echo 
 PS3='root@sqlmentor~:'
-options=("1. SQL Crawling" "2. SQL Crawling + Forms" "3. SQL GET Req." "4. SQL POST Req." "5. SQL Auth Site" "6. Collect DB & User" "7. Sql & Tables" "8. SQL User Columns" "9. SQL mssql DB" "10. SQL mysql DB" "11. SQL oracle DB" "12. SQL postgres DB")
+options=("1. SQL Crawling" "2. SQL Crawling + Forms" "3. SQL GET Req." "4. SQL POST Req." "5. SQL Auth Site" "6. Collect DB & User" "7. Sql & Tables" "8. SQL User Columns" "9. SQL mssql DB" "10. SQL mysql DB" "11. SQL oracle DB" "12. SQL postgres DB" "13. Update Tool")
 select opt in "${options[@]}"
 do 
 case $opt in 
@@ -73,6 +73,11 @@ command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b 
 "12. SQL postgres DB")
 command clear
 command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="postgres"
+;;
+"13. Update Tool")
+command clear
+command git pull
+command clear
 ;;
 esac
 echo "Press Ctrl + C"
