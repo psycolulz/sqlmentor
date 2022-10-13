@@ -4,7 +4,7 @@ clear
 main() {
 echo -ne "
 Credit For SQLmap Goes To Its Developers, Not Me. I Just Created The Cheet Sheat
-########################################################
+##############################################################################################
   ██████   █████   ██▓     ███▄ ▄███▓▓█████  ███▄    █ ▄▄▄█████▓ ▒█████   ██▀███  
 ▒██    ▒ ▒██▓  ██▒▓██▒    ▓██▒▀█▀ ██▒▓█   ▀  ██ ▀█   █ ▓  ██▒ ▓▒▒██▒  ██▒▓██ ▒ ██▒
 ░ ▓██▄   ▒██▒  ██░▒██░    ▓██    ▓██░▒███   ▓██  ▀█ ██▒▒ ▓██░ ▒░▒██░  ██▒▓██ ░▄█ ▒
@@ -14,10 +14,11 @@ Credit For SQLmap Goes To Its Developers, Not Me. I Just Created The Cheet Sheat
 ░ ░▒  ░ ░ ░ ▒░  ░ ░ ░ ▒  ░░  ░      ░ ░ ░  ░░ ░░   ░ ▒░    ░      ░ ▒ ▒░   ░▒ ░ ▒░  V. 1.0.3
 ░  ░  ░     ░   ░   ░ ░   ░      ░      ░      ░   ░ ░   ░      ░ ░ ░ ▒    ░░   ░ 
       ░      ░        ░  ░       ░      ░  ░         ░              ░ ░     ░     
-#############################                                                                          
+##############################################################################################                                                                          
  https://github.com/psycolulz
- This Tool Is For Educational Purposes! Shoutout To The SQLmap Developers "
-############
+ This Tool Is For Educational Purposes! Shoutout To The SQLmap Developers 
+ "
+
 PS3='root@sqlmentor~:'
 options=("SQL Crawling" "SQL Crawling + Forms" "SQL GET Req." "SQL POST Req." "SQL Auth Site" "Collect DB & User" "Sql & Tables" "SQL User Columns" "SQL mssql DB" "SQL mysql DB" "SQL oracle DB" "SQL postgres DB" "Update Tool")
 select opt in "${options[@]}"
