@@ -38,7 +38,7 @@ command sqlmap -u https://enterdomainhere.com/
 "SQL POST Req.")
 command clear
 command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val"
-;;%
+;;
 "SQL Auth Site")
 command clear
 command  sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --cookie="cookie1=val1;cookie2=val2"
