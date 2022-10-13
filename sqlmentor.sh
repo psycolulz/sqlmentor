@@ -22,20 +22,20 @@ options=("SQL Crawling" "SQL Crawling + Forms" "SQL GET Req." "SQL POST Req." "S
 select opt in "${options[@]}"
 do 
 case $opt in
-echo "SQL Crawlings"
+"SQL Crawlings")
 # Do Not Forget To Replace The Default Domains
 command clear
 command sqlmap -u https://enterdomainhere.com/ --crawl=2
 ;;
-echo "SQL Crawling + Forms"
+"SQL Crawling + Forms")
 command clear
 command sqlmap -u https://enterdomainhere.com/ --forms --crawl=2
 ;;
-echo "SQL GET Req."
+"SQL GET Req.")
 command clear
 command sqlmap -u https://enterdomainhere.com/
 ;;
-echo "SQL POST Req."
+"SQL POST Req.")
 command clear
 command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val"
 ;;%
