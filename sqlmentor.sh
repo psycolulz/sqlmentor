@@ -22,6 +22,7 @@ options=("SQL Crawling" "SQL Crawling + Forms" "SQL GET Req." "SQL POST Req." "S
 select opt in "${options[@]}"
 do 
 case $opt in
+
 "SQL Crawlings")
 command clear
 command sqlmap -u https://enterdomainhere.com/ --crawl=2
