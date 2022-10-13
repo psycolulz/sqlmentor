@@ -1,3 +1,5 @@
+Credit For SQLmap: https://github.com/sqlmapproject/sqlmap @sqlmapproject
+
 Welcome To SQLmentor.
 I made this tool because when I first started I had heard a lot about SQLmap and people using it but didn't really understand
 how to use it.
