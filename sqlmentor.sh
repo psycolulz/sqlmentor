@@ -23,7 +23,6 @@ select opt in "${options[@]}"
 do 
 case $opt in
 "SQL Crawlings")
-# Do Not Forget To Replace The Default Domains
 command clear
 command sqlmap -u https://enterdomainhere.com/ --crawl=2
 ;;
