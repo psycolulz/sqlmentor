@@ -15,7 +15,7 @@ echo "  ██████   █████   ██▓     ███▄ ▄█
       ░      ░        ░  ░       ░      ░  ░         ░              ░ ░     ░     
      "                                                                             
 echo
-echo "https://github.com/psycolulz
+echo "https://github.com/psycolulz"
 echo
 echo " This Tool Is For Educational Purposes! Shoutout To The SQLmap Developers"
 echo 
