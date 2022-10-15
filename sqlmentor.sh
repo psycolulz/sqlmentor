@@ -4,6 +4,7 @@ BANNER1="\033[31m"
 BANNER2="\033[1;32m"
 MENU="\033[0;33m"
 clear
+#don't forget to change the default domains
 main() {
 echo -ne " ${BANNER2}
 Credit For SQLmap Goes To Its Developers, Not Me. I Just Created The Cheet Sheat
